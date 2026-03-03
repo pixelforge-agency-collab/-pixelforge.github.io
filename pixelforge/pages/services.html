@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Services — PixelForge Agency</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>"/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="../css/style.css"/>
+<style>
+.page-hero{padding:160px 52px 80px;background:var(--ink);position:relative;overflow:hidden;}
+.page-hero-glow{position:absolute;width:400px;height:400px;background:var(--accent);border-radius:50%;filter:blur(100px);opacity:.15;top:-100px;right:-80px;}
+.page-hero h1{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(44px,5vw,72px);color:white;letter-spacing:-2px;line-height:1.05;margin-bottom:20px;}
+.page-hero p{font-size:18px;color:rgba(255,255,255,.5);max-width:520px;line-height:1.7;font-weight:300;}
+.services-detail{padding:100px 52px;background:var(--paper);}
+.svc-block{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;padding:60px 0;border-bottom:1px solid var(--border);}
+.svc-block:last-child{border-bottom:none;}
+.svc-block.flip{direction:rtl;}
+.svc-block.flip>*{direction:ltr;}
+.svc-num{font-family:'Syne',sans-serif;font-weight:800;font-size:100px;color:var(--border);line-height:1;margin-bottom:-20px;}
+.svc-title{font-family:'Syne',sans-serif;font-weight:800;font-size:32px;letter-spacing:-1px;margin-bottom:16px;}
+.svc-desc{font-size:16px;color:var(--muted);line-height:1.75;margin-bottom:24px;font-weight:300;}
+.svc-list{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.svc-list li{font-size:14px;display:flex;align-items:center;gap:10px;color:var(--ink);}
+.svc-list li::before{content:'→';color:var(--accent);font-weight:700;flex-shrink:0;}
+.svc-visual{background:var(--card);border-radius:20px;height:280px;display:flex;align-items:center;justify-content:center;font-size:80px;border:1px solid var(--border);}
+.cta-strip{background:var(--accent);padding:80px 52px;text-align:center;}
+.cta-strip h2{font-family:'Syne',sans-serif;font-weight:800;font-size:44px;color:white;letter-spacing:-1.5px;margin-bottom:16px;}
+.cta-strip p{color:rgba(255,255,255,.8);font-size:17px;margin-bottom:36px;}
+.btn-white{background:white;color:var(--accent);padding:15px 36px;border-radius:100px;font-weight:600;font-size:15px;text-decoration:none;transition:all .2s;}
+.btn-white:hover{background:var(--ink);color:white;}
+@media(max-width:860px){.page-hero{padding:130px 28px 60px;}.services-detail{padding:60px 28px;}.svc-block{grid-template-columns:1fr;gap:30px;}.svc-block.flip{direction:ltr;}.cta-strip{padding:60px 28px;}}
+</style>
+</head>
+<body>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+<nav id="navbar">
+  <a href="../index.html" class="nav-logo">PIXEL<span>FORGE</span></a>
+  <ul class="nav-links">
+    <li><a href="../index.html#services">Services</a></li>
+    <li><a href="portfolio.html">Work</a></li>
+    <li><a href="../index.html#pricing">Pricing</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="../index.html#contact" class="nav-cta">Get a Quote</a></li>
+  </ul>
+  <button class="mob-hamburger" onclick="document.getElementById('mobOverlay').classList.add('open')">☰</button>
+</nav>
+<div class="mob-overlay" id="mobOverlay">
+  <button class="mob-close" onclick="document.getElementById('mobOverlay').classList.remove('open')">✕</button>
+  <ul class="mob-links">
+    <li><a href="../index.html#services" onclick="document.getElementById('mobOverlay').classList.remove('open')">Services</a></li>
+    <li><a href="portfolio.html" onclick="document.getElementById('mobOverlay').classList.remove('open')">Work</a></li>
+    <li><a href="../index.html#pricing" onclick="document.getElementById('mobOverlay').classList.remove('open')">Pricing</a></li>
+    <li><a href="../index.html#contact" onclick="document.getElementById('mobOverlay').classList.remove('open')" class="mob-cta">Get a Free Quote →</a></li>
+  </ul>
+</div>
+<div class="page-hero">
+  <div class="page-hero-glow"></div>
+  <div class="section-tag fade-in" style="color:rgba(255,255,255,.35)">Our Services</div>
+  <h1 class="fade-in">Everything You Need<br/>to Sell Online</h1>
+  <p class="fade-in">From custom Shopify stores to full-scale headless commerce — we build, design, and optimize every part of your e-commerce experience.</p>
+</div>
+<section class="services-detail">
+  <div class="svc-block fade-in">
+    <div>
+      <div class="svc-num">01</div>
+      <div class="svc-title">Shopify Development</div>
+      <p class="svc-desc">We build custom Shopify stores that are beautiful, fast, and optimized to convert. Whether it's a fresh launch or a full redesign, we handle everything from theme development to complex app integrations.</p>
+      <ul class="svc-list">
+        <li>Custom Liquid theme development</li>
+        <li>Shopify Plus migration & setup</li>
+        <li>App integration & custom apps</li>
+        <li>Multi-currency & international stores</li>
+        <li>Subscription & membership setup</li>
+      </ul>
+    </div>
+    <div class="svc-visual">🛍️</div>
+  </div>
+  <div class="svc-block flip fade-in">
+    <div>
+      <div class="svc-num">02</div>
+      <div class="svc-title">Performance Optimization</div>
+      <p class="svc-desc">A 1-second delay in page load time can cost you 7% in conversions. We make stores blazing fast — targeting sub-2-second loads and 90+ PageSpeed scores on every build.</p>
+      <ul class="svc-list">
+        <li>Core Web Vitals optimization</li>
+        <li>Image compression & lazy loading</li>
+        <li>Code splitting & minification</li>
+        <li>CDN setup & caching strategy</li>
+        <li>Third-party script audit</li>
+      </ul>
+    </div>
+    <div class="svc-visual">⚡</div>
+  </div>
+  <div class="svc-block fade-in">
+    <div>
+      <div class="svc-num">03</div>
+      <div class="svc-title">UI/UX Design</div>
+      <p class="svc-desc">Great design isn't just beautiful — it converts. We craft user experiences that guide customers naturally from landing to checkout, reducing friction and increasing average order value.</p>
+      <ul class="svc-list">
+        <li>User research & persona mapping</li>
+        <li>Wireframing & prototyping</li>
+        <li>High-fidelity Figma mockups</li>
+        <li>Design system creation</li>
+        <li>Accessibility compliance (WCAG 2.1)</li>
+      </ul>
+    </div>
+    <div class="svc-visual">🎨</div>
+  </div>
+  <div class="svc-block flip fade-in">
+    <div>
+      <div class="svc-num">04</div>
+      <div class="svc-title">CRO & Analytics</div>
+      <p class="svc-desc">We use data, not guesswork. Through A/B testing, heatmap analysis, and funnel optimization we systematically improve your conversion rate month over month.</p>
+      <ul class="svc-list">
+        <li>GA4 & enhanced e-commerce setup</li>
+        <li>Hotjar / Microsoft Clarity heatmaps</li>
+        <li>A/B & multivariate testing</li>
+        <li>Checkout funnel analysis</li>
+        <li>Monthly performance reporting</li>
+      </ul>
+    </div>
+    <div class="svc-visual">📈</div>
+  </div>
+</section>
+<div class="cta-strip fade-in">
+  <h2>Ready to Get Started?</h2>
+  <p>Tell us about your project and we'll send you a free, detailed proposal within 48 hours.</p>
+  <a href="../index.html#contact" class="btn-white">Get Your Free Quote →</a>
+</div>
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="footer-logo">PIXEL<span>FORGE</span></div>
+      <p class="footer-tagline">Building e-commerce experiences that convert visitors into customers.</p>
+    </div>
+    <div class="footer-cols">
+      <div class="footer-col"><div class="footer-col-title">Services</div><a href="#">Shopify Development</a><a href="#">WooCommerce</a><a href="#">UI/UX Design</a><a href="#">Performance</a></div>
+      <div class="footer-col"><div class="footer-col-title">Company</div><a href="about.html">About Us</a><a href="portfolio.html">Portfolio</a><a href="blog.html">Blog</a></div>
+      <div class="footer-col"><div class="footer-col-title">Contact</div><a href="mailto:hello@pixelforge.agency">hello@pixelforge.agency</a></div>
+    </div>
+  </div>
+  <div class="footer-bottom"><div class="footer-copy">© 2026 PixelForge Agency.</div></div>
+</footer>
+<script src="../js/main.js"></script>
+</body>
+</html>
